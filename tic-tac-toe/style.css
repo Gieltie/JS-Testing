@@ -1,0 +1,42 @@
+main {
+  height: 100vh;
+  background-image: linear-gradient(to right, #f1cbc8, #ebc9c5, #e4c8c3, #ddc6c1, #d7c4bf);
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  /* padding-top: 5em; */
+  /* background: #000; */
+}
+
+.square {
+  background: transparent; /* Make buttons transparent */
+  padding: 0;
+  font-size: 2em;
+  color: #000;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.square:not(:nth-child(3n)) {
+  border-right: 2px dotted #000;
+}
+
+.square:not(:nth-child(-n+3)) {
+  border-top: 2px dotted #000;
+}
+
+.square:nth-child(3n) {
+  border-right: none;
+}
+
+.square:nth-last-child(-n+3) {
+  border-bottom: none;
+}
